@@ -19,21 +19,15 @@ public class PlayerStats : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (curHp <= 0) {
-			curHp = 0;
-			Death();
-		}
-		if (curExp >= maxExp) {
-			LevelUp();
-		}
-		
+
 		// For testing
-		if(Input.GetKeyDown("1")) {
-			curHp--;
+		if(Input.GetKeyDown("5")) {
+			Heal (10);
 		}
-		if(Input.GetKeyDown("2")) {
-			curExp++;
+		if(Input.GetKeyDown("6")) {
+			GainExp(10);
 		}
+
 	}
 
 	void Death () {
@@ -46,23 +40,27 @@ public class PlayerStats : MonoBehaviour {
 		maxExp += maxExp/10 - level*intellect;
 	}
 
-	public int GetCurHp () {
-		return curHp;
+	// Public Modifiers
+	public void Heal (int healAmount) {
+		curHp = Mathf.Min(curHp + healAmount, maxHp);
 	}
-	
-	public int GetMaxHp () {
-		return maxHp;
+	public void TakeDamage (int damage) {
+		curHp = Mathf.Max(curHp - damage, 0);
+		if (curHp == 0) {
+			Death ();
+		}
 	}
-	
-	public int GetCurExp () {
-		return curExp;
-	}
-	
-	public int GetMaxExp () {
-		return maxExp;
+	public void GainExp (int exp) {
+		curExp = Mathf.Min (curExp + exp, maxExp);
+		if (curExp == maxExp) {
+			LevelUp ();
+		}
 	}
 
-	public int GetIntellect () {
-		return intellect;
-	}
+	// Public Accessors
+	public int GetCurHp () {return curHp;}
+	public int GetMaxHp () {return maxHp;}
+	public int GetCurExp () {return curExp;}
+	public int GetMaxExp () {return maxExp;}
+	public int GetIntellect () {return intellect;}
 }
