@@ -22,14 +22,14 @@ public class Dash : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.rigidbody.AddForce(this.transform.forward);
+		this.GetComponent<Rigidbody>().AddForce(this.transform.forward);
 		if (Input.GetKeyDown(KeyCode.W)) {
 			if (keyW == 0) {
 				keyW = 1;
 			}
 			else if (keyW == 1) {
 //				keyW = 2;
-				this.rigidbody.AddForce(this.transform.forward * 100);
+				this.GetComponent<Rigidbody>().AddForce(this.transform.forward * 100);
 				keyW = 0;
 			}
 		}

@@ -41,7 +41,7 @@ function CreateMap () {
 }
 
 function LoadMap () {
-	squareLength = mapSquares[0].renderer.bounds.size.x;
+	squareLength = mapSquares[0].GetComponent.<Renderer>().bounds.size.x;
 	for (var x : int = 0; x < mapSize; x++) {
 		for (var z : uint = 0; z < mapSize; z++) {
 			var planePosition : Vector3 = new Vector3(this.transform.position.x + x*squareLength, this.transform.position.y, this.transform.position.z + z*squareLength);

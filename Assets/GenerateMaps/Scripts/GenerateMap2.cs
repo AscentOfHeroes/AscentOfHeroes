@@ -50,7 +50,7 @@ public class GenerateMap2 : MonoBehaviour {
 	}
 
 	void LoadMap () {
-		squareLength = mapSquares[0].renderer.bounds.size.x;
+		squareLength = mapSquares[0].GetComponent<Renderer>().bounds.size.x;
 		for (int x = 0; x < mapSize; x++) {
 			for (int z = 0; z < mapSize; z++) {
 				Vector3 planePosition = new Vector3(this.transform.position.x + x*squareLength, this.transform.position.y, this.transform.position.z + z*squareLength);
