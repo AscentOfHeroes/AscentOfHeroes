@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerStats : MonoBehaviour {
@@ -12,9 +13,11 @@ public class PlayerStats : MonoBehaviour {
 	
 	private static int intellect = 0;
 
+	public Text levelText;
+
 	// Use this for initialization
 	void Start () {
-
+		levelText.text = "Level " + level;
 	}
 	
 	// Update is called once per frame
@@ -38,6 +41,7 @@ public class PlayerStats : MonoBehaviour {
 		level++;
 		curExp = 0;
 		maxExp += maxExp/10 - level*intellect;
+		levelText.text = "Level " + level;
 	}
 
 	// Public Modifiers
