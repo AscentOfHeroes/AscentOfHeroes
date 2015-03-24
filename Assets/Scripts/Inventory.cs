@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -6,6 +7,7 @@ public class Inventory : MonoBehaviour {
 
 	public List<GameObject> inventory;
 	public GameObject itemDatabase;
+	public Text interactionDescriptorText;
 
 	// Use this for initialization
 	void Start () {
@@ -14,8 +16,8 @@ public class Inventory : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.E)) {
-			if ( LookingAtPickup() ) {
+		if ( LookingAtPickup() ) {
+			if (Input.GetKeyDown(KeyCode.E)) {
 				AddPickupToInventory();
 			}
 		}
@@ -26,8 +28,15 @@ public class Inventory : MonoBehaviour {
 		RaycastHit hit;
 		if (Physics.Raycast(ray, out hit, 3)) {
 			if (hit.collider.gameObject.tag == "Pickup") {
+				interactionDescriptorText.text = hit.collider.gameObject.name;
 				return true;
 			}
+			else {
+				interactionDescriptorText.text = "";
+			}
+		}
+		else {
+			interactionDescriptorText.text = "";
 		}
 		return false;
 	}
