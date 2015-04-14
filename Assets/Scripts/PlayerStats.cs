@@ -22,7 +22,6 @@ public class PlayerStats : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
 		// For testing
 		if(Input.GetKeyDown("5")) {
 			Heal (10);
@@ -30,11 +29,11 @@ public class PlayerStats : MonoBehaviour {
 		if(Input.GetKeyDown("6")) {
 			GainExp(10);
 		}
-
 	}
 
 	void Death () {
-		
+		Application.LoadLevel(Application.loadedLevel);
+		curHp = maxHp;
 	}
 
 	void LevelUp () {

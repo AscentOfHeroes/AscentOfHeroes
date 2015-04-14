@@ -46,12 +46,6 @@ public class EquipWeapon : MonoBehaviour {
 		if (currentlyEquipped == i) {
 			return true;
 		}
-
-//		if (equip && InventoryIsLargeEnough(i)) {
-//			if (inventory[i].gameObject.name+"(Clone)" == equip.name) {
-//				return true;
-//			}
-//		}
 		return false;
 	}
 
@@ -73,6 +67,7 @@ public class EquipWeapon : MonoBehaviour {
 	void DropWeapon () {
 		if (equip != null) {
 			equip.transform.parent = null;
+			equip.AddComponent<Rigidbody>();
 			inventory.RemoveAt(currentlyEquipped);
 			equip = null;
 			currentlyEquipped = -1;
