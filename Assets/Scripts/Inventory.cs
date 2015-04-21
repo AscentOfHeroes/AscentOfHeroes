@@ -21,6 +21,11 @@ public class Inventory : MonoBehaviour {
 				AddPickupToInventory();
 			}
 		}
+
+		if ( Input.GetKeyDown(KeyCode.Mouse0) ) {
+			Debug.Log ("Attacking");
+			AttackEnemy();
+		}
 	}
 
 	bool LookingAtPickup () {
@@ -39,6 +44,16 @@ public class Inventory : MonoBehaviour {
 			interactionDescriptorText.text = "";
 		}
 		return false;
+	}
+
+	void AttackEnemy () {
+		Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+		RaycastHit hit;
+		if (Physics.Raycast(ray, out hit, 3)) {
+			if (hit.collider.gameObject.tag == "Enemy") {
+				hit.collider.gameObject.GetComponent<EnemyStats>().TakeDamage(10);
+			}
+		}
 	}
 
 	void AddPickupToInventory() {
