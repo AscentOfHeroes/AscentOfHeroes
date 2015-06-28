@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class EquipWeapon : MonoBehaviour {
 
-	GameObject equip;
+	public static GameObject equip;
 	List<GameObject> inventory;
 	int currentlyEquipped = -1;
 

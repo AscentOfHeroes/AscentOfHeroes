@@ -4,20 +4,11 @@ using System.Collections;
 public class Dash : MonoBehaviour {
 
 	int keyW;
-	float countdown = 0.5f;
-	float timer;
 	bool startTimer;
-	CharacterMotor motor;
-	float dashCountdown = 0.5f;
-	float dashTimer;
-	float dashAcceleration = 10.0f;
 
 	// Use this for initialization
 	void Start () {
 		keyW = 0;
-		timer = countdown;
-		motor = this.GetComponent<CharacterMotor>();
-		dashTimer = dashCountdown;
 	}
 	
 	// Update is called once per frame

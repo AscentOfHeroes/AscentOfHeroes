@@ -5,13 +5,11 @@ using UnityEditor;
 [CustomEditor(typeof(DarkZone))]
 [CanEditMultipleObjects]
 public class DarkZoneEditor : Editor {
-	SerializedProperty transitionTypeProp;
 	SerializedProperty transitionDurationProp;
 	SerializedProperty darkRadiusProp;
 
 	public void OnEnable () {
 		// Setup the SerializedProperties
-		transitionTypeProp = serializedObject.FindProperty("transitionType");
 		transitionDurationProp = serializedObject.FindProperty("transitionDuration");
 		darkRadiusProp = serializedObject.FindProperty("darkRadius");
 	}

@@ -498,7 +498,7 @@ GameObject:
   - 65: {fileID: 540634068}
   - 23: {fileID: 540634067}
   m_Layer: 0
-  m_Name: SampleScene
+  m_Name: Forest
   m_TagString: LoadScene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
