@@ -883,7 +883,7 @@ Transform:
   m_Children:
   - {fileID: 1349749953}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!114 &556089263
 MonoBehaviour:
   m_ObjectHideFlags: 0
