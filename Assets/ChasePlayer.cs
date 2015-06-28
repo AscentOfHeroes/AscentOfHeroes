@@ -14,9 +14,11 @@ public class ChasePlayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
-		agent.SetDestination(playerPosition);
-		if (Vector3.Distance(agent.transform.position, agent.destination) <= agent.stoppingDistance) {
-			agent.transform.LookAt(new Vector3(playerPosition.x, agent.transform.position.y, playerPosition.z));
+		if (Vector3.Distance(transform.position, playerPosition) < EnemyStats.aggroRange) {
+			agent.SetDestination(playerPosition);
+			if (Vector3.Distance(agent.transform.position, agent.destination) <= agent.stoppingDistance) {
+				agent.transform.LookAt(new Vector3(playerPosition.x, agent.transform.position.y, playerPosition.z));
+			}
 		}
 	}
 }

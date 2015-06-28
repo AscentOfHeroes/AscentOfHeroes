@@ -7,7 +7,8 @@ public class LookAtPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
-		transform.LookAt(Camera.main.transform.position);
+		if (Vector3.Distance(transform.position, Camera.main.transform.position) < EnemyStats.aggroRange) {
+			transform.LookAt(Camera.main.transform.position);
+		}
 	}
 }
