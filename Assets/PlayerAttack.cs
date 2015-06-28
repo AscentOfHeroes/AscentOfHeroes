@@ -3,8 +3,6 @@ using System.Collections;
 
 public class PlayerAttack : MonoBehaviour {
 
-
-
 	// Use this for initialization
 	void Start () {
 	
@@ -13,12 +11,11 @@ public class PlayerAttack : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if ( Input.GetKeyDown(KeyCode.Mouse0) ) {
-			EquipWeapon.equip.transform.Translate(0,0,1);
-			Debug.Log ("Attacking");
+			EquipWeapon.equipSpot.Translate(0,0,1);
 			AttackEnemy();
 		}
 		else if (Input.GetKeyUp(KeyCode.Mouse0)) {
-			EquipWeapon.equip.transform.Translate(0,0,-1);
+			EquipWeapon.equipSpot.Translate(0,0,-1);
 		}
 	}
 

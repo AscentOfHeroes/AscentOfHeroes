@@ -5,15 +5,14 @@ using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour {
 
-	public List<GameObject> inventory;
-	public GameObject itemDatabase;
+	public static List<string> inventory;
 	public Text interactionDescriptorText;
 
 	// Use this for initialization
 	void Start () {
-		
+		inventory = new List<string>();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if ( LookingAtPickup() ) {
@@ -46,17 +45,17 @@ public class Inventory : MonoBehaviour {
 		RaycastHit hit;
 		if (Physics.Raycast(ray, out hit, 3)) {
 			if (hit.collider.gameObject.tag == "Pickup") {
-				inventory.Add(getItemFromDatabase(hit.collider.gameObject.name));
+				inventory.Add(hit.collider.gameObject.name);
 				Destroy(hit.collider.gameObject);
 			}
 		}
 	}
 
-	public GameObject getInventoryItem (int i) {
+	public string getInventoryItem (int i) {
 		return inventory[i];
 	}
 
 	public GameObject getItemFromDatabase (string name) {
-		return itemDatabase.GetComponent<AllItems>().getItemFromDatabase(name);
+		return (GameObject)Resources.Load(name);
 	}
 }

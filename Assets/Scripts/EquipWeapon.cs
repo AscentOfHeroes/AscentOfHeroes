@@ -4,13 +4,13 @@ using System.Collections.Generic;
 
 public class EquipWeapon : MonoBehaviour {
 
+	public static Transform equipSpot;
 	public static GameObject equip;
-	List<GameObject> inventory;
 	int currentlyEquipped = -1;
 
 	// Use this for initialization
 	void Start () {
-		inventory = transform.parent.parent.gameObject.GetComponent<Inventory>().inventory;
+		equipSpot = transform;
 	}
 	
 	// Update is called once per frame
@@ -50,11 +50,11 @@ public class EquipWeapon : MonoBehaviour {
 	}
 
 	bool InventoryIsLargeEnough (int i) {
-		return inventory.Count >= i+1;
+		return Inventory.inventory.Count >= i+1;
 	}
 
 	GameObject getInventoryItem (int i) {
-		return inventory[i];
+		return (GameObject)Resources.Load((string)Inventory.inventory[i]);
 	}
 
 	void UnequipWeapon () {
@@ -68,7 +68,7 @@ public class EquipWeapon : MonoBehaviour {
 		if (equip != null) {
 			equip.transform.parent = null;
 			equip.AddComponent<Rigidbody>();
-			inventory.RemoveAt(currentlyEquipped);
+			Inventory.inventory.RemoveAt(currentlyEquipped);
 			equip = null;
 			currentlyEquipped = -1;
 		}
