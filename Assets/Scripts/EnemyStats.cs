@@ -19,7 +19,6 @@ public class EnemyStats : MonoBehaviour {
 
 	public void TakeDamage (int damage) {
 		curHp = Mathf.Max(curHp - damage, 0);
-		Debug.Log (curHp);
 		if (curHp == 0) {
 			Death ();
 		}

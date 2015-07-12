@@ -864,6 +864,7 @@ GameObject:
   - 195: {fileID: 556089265}
   - 114: {fileID: 556089270}
   - 114: {fileID: 556089263}
+  - 114: {fileID: 556089264}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -896,6 +897,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHp: 50
+--- !u!114 &556089264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 556089261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418bddc7ab5020c47a7567b5e397a1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToAttack: 1
 --- !u!195 &556089265
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -970,7 +983,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aecf171e15e0d884dbbfc2a713023fb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &584487841 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100168, guid: b235179bd2a63d1468dd430670338c55, type: 3}
