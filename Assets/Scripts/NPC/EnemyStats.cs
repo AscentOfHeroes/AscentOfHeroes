@@ -3,7 +3,6 @@ using System.Collections;
 
 public class EnemyStats : MonoBehaviour {
 
-	public static int aggroRange = 20;
 	public float maxHp = 50;
 	private float curHp;
 

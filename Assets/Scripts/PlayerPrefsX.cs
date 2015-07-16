@@ -1,7 +1,7 @@
 ﻿// Contribution (Created CSharp Version) 10/2010: Daniel P. Rossi (DR9885)
 // Contribution (Created Bool Array) 10/2010: Daniel P. Rossi (DR9885)
 // Contribution (Made functions public) 01/2011: Bren
-	
+
 using UnityEngine;
 using System;
 
