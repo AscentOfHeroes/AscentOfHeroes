@@ -8,7 +8,6 @@ TagManager:
   - DamageZone
   - Pickup
   - Enemy
-  - GameController
   - WeaponHolder
   layers:
   - Default
