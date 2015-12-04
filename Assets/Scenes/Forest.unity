@@ -1165,7 +1165,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1700989197}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
 --- !u!4 &589495764
@@ -3972,6 +3972,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1700989197 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 129658, guid: 6af058dc34dd92c448e017be45f4a084, type: 2}
+  m_PrefabInternal: {fileID: 2138328355}
 --- !u!1001 &1718090762
 Prefab:
   m_ObjectHideFlags: 0
@@ -4651,6 +4655,14 @@ Prefab:
     - target: {fileID: 11476700, guid: 6af058dc34dd92c448e017be45f4a084, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 22478416, guid: 6af058dc34dd92c448e017be45f4a084, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439778, guid: 6af058dc34dd92c448e017be45f4a084, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6af058dc34dd92c448e017be45f4a084, type: 2}

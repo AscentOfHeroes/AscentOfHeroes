@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using System.Collections;
 
 public class Pause : MonoBehaviour {
@@ -26,7 +27,7 @@ public class Pause : MonoBehaviour {
     public void TogglePause()
     {
         // Toggle the timescale between 1 and 0
-        Time.timeScale = (Time.timeScale + 1) % 2;
+        Time.timeScale = Time.timeScale == 0 ? 1 : 0;
 
         // Toggle MouseLook scripts on both Player and Main Camera
         GetComponent<MouseLook>().enabled = !GetComponent<MouseLook>().enabled;
@@ -34,5 +35,11 @@ public class Pause : MonoBehaviour {
 
         // Toggle the pause menu on or off
         pauseMenu.SetActive(!pauseMenu.activeSelf);
+
+        if (pauseMenu.activeSelf)
+        {
+            // Set which menu item
+            EventSystem.current.SetSelectedGameObject(EventSystem.current.firstSelectedGameObject);
+        }
     }
 }
