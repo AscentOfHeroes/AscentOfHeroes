@@ -555,7 +555,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1310122226}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10, y: -10}
@@ -1038,7 +1038,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1310122226}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10, y: -40}
@@ -1514,7 +1514,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1310122226}
+  m_Father: {fileID: 1854709948}
   m_RootOrder: 0
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -4479,7 +4479,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1310122226}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10, y: -10}
@@ -5907,7 +5907,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 367513396}
   - {fileID: 1854709948}
   - {fileID: 1007034308}
   - {fileID: 1536588153}
@@ -7614,7 +7613,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1310122226}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10, y: -40}
@@ -7664,6 +7663,7 @@ GameObject:
   - 114: {fileID: 1536661807}
   - 114: {fileID: 1536661806}
   - 114: {fileID: 1536661805}
+  - 114: {fileID: 1536661804}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -7671,6 +7671,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1536661804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1536661803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 129220f71e3ea444aa22fa098ccdb089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1536661805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9997,7 +10008,7 @@ GameObject:
   - 222: {fileID: 1854709950}
   - 114: {fileID: 1854709949}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: DebugPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10012,9 +10023,10 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 367513396}
   m_Father: {fileID: 1310122226}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -10227,7 +10239,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1310122226}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 110, y: -48.7999992}
@@ -10940,7 +10952,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22473906, guid: 6af058dc34dd92c448e017be45f4a084, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 22473906, guid: 6af058dc34dd92c448e017be45f4a084, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -10952,11 +10964,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22473906, guid: 6af058dc34dd92c448e017be45f4a084, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 22473906, guid: 6af058dc34dd92c448e017be45f4a084, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 22473906, guid: 6af058dc34dd92c448e017be45f4a084, type: 2}
       propertyPath: m_AnchorMin.x
@@ -11691,7 +11703,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1310122226}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: 0}
